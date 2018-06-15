@@ -1,15 +1,15 @@
-import amenhotep from "./images/amenhotep";
-import beastlord from "./images/beastlord";
-import betty from "./images/betty";
-import broyle from "./images/broyle";
-import fisherman from "./images/fisherman";
-import Frostleaf from "./images/Frostleaf";
-import Gog from "./images/Gog";
-import Grant from "./images/Grant";
-import leon from "./images/leon";
-import Moeru from "./images/Moeru";
-import Shinatobe from "./images/Shinatobe";
-import Zilar from "./images/Zilar";
+import amenhotep from "./images/amenhotep.png";
+import beastlord from "./images/beastlord.png";
+import betty from "./images/betty.png";
+import broyle from "./images/broyle.png";
+import fisherman from "./images/fisherman.png";
+import frostleaf from "./images/frostleaf.png";
+import gog from "./images/gog.png";
+import grant from "./images/grant.png";
+import leon from "./images/leon.png";
+import moeru from "./images/moeru.png";
+import shinatobe from "./images/shinatobe.png";
+import zilar from "./images/zilar.png";
 
 const images = [
 amenhotep,
@@ -17,13 +17,13 @@ beastlord,
 betty,
 broyle,
 fisherman,
-Frostleaf,
-Gog,
-Grant,
+frostleaf,
+gog,
+grant,
 leon,
-Moeru,
-Shinatobe,
-Zilar
+moeru,
+shinatobe,
+zilar
 ];
 
 export default images;

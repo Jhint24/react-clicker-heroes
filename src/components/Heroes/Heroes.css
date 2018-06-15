@@ -1,0 +1,11 @@
+.hero-image{
+    width: 150px;
+    height: 150px;
+
+}
+
+.card   {
+    max-width: 150px;
+    float: left;
+    margin: 25px;
+}
