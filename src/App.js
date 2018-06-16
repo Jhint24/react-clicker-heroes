@@ -56,6 +56,12 @@ class App extends Component {
     //grab random index of shuffleCards and put into newCardOrder
     //******************LOOK UP and use*****************
     //while loop
+    //look up splice and slice
+    //Array splice method
+    //   Array push method
+    //   Math.random
+    //   Math.floor
+    //   while loop
   };
 
   render() {
