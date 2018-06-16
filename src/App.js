@@ -17,7 +17,6 @@ class App extends Component {
   handleClick = event => {
     event.preventDefault();
     this.clickChecker(event.target);
-    //   this.shuffle();
   };
 
   clickyEvent = this.handleClick.bind(this);
@@ -29,18 +28,25 @@ class App extends Component {
   clickChecker = clickedImage => {
     let currentScore = this.state.score;
     let currentClicked = this.state.clicked.slice();
+    const shuffled = this.shuffleCards();
 
     if (!this.state.clicked.includes(clickedImage.src)) {
       //update score
       currentClicked.push(clickedImage.src);
       this.setState({
-        score: currentScore++,
+        score: (currentScore += 1),
         clicked: currentClicked
       });
       console.log(this.state.clicked);
       //this.state.highScore++;
     } else {
       console.log('hello');
+
+      this.setState({
+        score: 0,
+        clicked: []
+      });
+
       //reset score, reset array of clicked, shuffle images
     }
   };
@@ -50,10 +56,20 @@ class App extends Component {
   //make variable of copy of current array using slice
   //create an ew empty which will contain randomized array
   //randomize order on screen
-  shuffleCards = () => {
+  //splice also mutates the components array; mutating your State elements is A Bad Thing To Do; one simple way to avoid that is to create a clone of your array and splice that.
+  shuffleCards() {
     let shuffledCards = images.slice();
     let newCardOrder = []; //new random
+
+    //while loop loops through a block of code as long as a specified condition is true.
     //grab random index of shuffleCards and put into newCardOrder
+
+    while (shuffledCards.length > 0) {
+      newCardOrder.push(
+        shuffledCards.splice(Math.floor(Math.random() * shuffledCards.length), 1)[0]
+      );
+    }
+
     //******************LOOK UP and use*****************
     //while loop
     //look up splice and slice
@@ -62,7 +78,7 @@ class App extends Component {
     //   Math.random
     //   Math.floor
     //   while loop
-  };
+  }
 
   render() {
     return (
