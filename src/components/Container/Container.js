@@ -3,7 +3,7 @@ import './Container.css';
 import Heroes from '../Heroes';
 
 const Container = props => (
-  <div className="container">
+  <div className="container background-cont">
     <div className="click-pictures">
       {props.heroesPictured.map((clickers, i) => (
         <Heroes key={i} hero={clickers} clickedEvent={props.clicked} />
