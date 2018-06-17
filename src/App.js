@@ -10,7 +10,8 @@ class App extends Component {
     highScore: 0,
     //images
     allHeroes: this.shuffleCards(),
-    clicked: []
+    clicked: [],
+    intialNavMessage: 'Click an Image to Begin the Game'
   };
   //   componentDidMount() {
   //     console.log(this.state.allHeroes);
@@ -61,6 +62,11 @@ class App extends Component {
         clicked: currentClicked,
         allHeroes: shuffleUp
       });
+      if (this.state.highScore < currentScore) {
+        this.setState({
+          highScore: currentScore
+        });
+      }
       //   console.log(this.state.clicked);
       //   console.log(this.state.allHeroes);
       //this.state.highScore++;
@@ -80,7 +86,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar score={this.state.score} highScore={this.state.highScore} />
+        <Navbar
+          score={this.state.score}
+          highScore={this.state.highScore}
+          navMessage={this.state.intialNavMessage}
+        />
         <Container heroesPictured={this.state.allHeroes} clicked={this.clickyEvent} />
       </div>
     );
