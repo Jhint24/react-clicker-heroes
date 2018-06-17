@@ -60,14 +60,12 @@ class App extends Component {
   shuffleCards() {
     let shuffledCards = images.slice();
     let newCardOrder = []; //new random
-
+    let randomize = shuffledCards.splice([Math.floor(Math.random() * shuffledCards.length), 1])[0];
     //while loop loops through a block of code as long as a specified condition is true.
     //grab random index of shuffleCards and put into newCardOrder
 
     while (shuffledCards.length > 0) {
-      newCardOrder.push(
-        shuffledCards.splice(Math.floor(Math.random() * shuffledCards.length), 1)[0]
-      );
+      newCardOrder.push(randomize);
     }
 
     //******************LOOK UP and use*****************
