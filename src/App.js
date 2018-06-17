@@ -71,7 +71,7 @@ class App extends Component {
       //   console.log(this.state.allHeroes);
       //this.state.highScore++;
     } else {
-      console.log('weiners');
+      console.log('working');
 
       this.setState({
         score: 0,
