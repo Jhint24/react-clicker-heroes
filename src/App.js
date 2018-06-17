@@ -60,11 +60,20 @@ class App extends Component {
       this.setState({
         score: (currentScore += 1),
         clicked: currentClicked,
-        allHeroes: shuffleUp
+        allHeroes: shuffleUp,
+        intialNavMessage: 'Correct!!! Guess Again'
       });
       if (this.state.highScore < currentScore) {
         this.setState({
           highScore: currentScore
+        });
+      }
+      if (currentScore === 12) {
+        this.setState({
+          intialNavMessage: "Unreal!!! You've Beaten my Game!",
+          score: 0,
+          clicked: [],
+          allHeroes: shuffleUp
         });
       }
       //   console.log(this.state.clicked);
@@ -76,7 +85,8 @@ class App extends Component {
       this.setState({
         score: 0,
         clicked: [],
-        allHeroes: shuffleUp
+        allHeroes: shuffleUp,
+        intialNavMessage: 'Sorry, Try Again!'
       });
 
       //reset score, reset array of clicked, shuffle images
