@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Container from './components/Container';
-import images from './images';
+import images from './Images';
 class App extends Component {
   state = {
     //scoring
@@ -70,7 +70,7 @@ class App extends Component {
       }
       if (currentScore === 12) {
         this.setState({
-          intialNavMessage: "Unreal!!! You've Beaten my Game!",
+          intialNavMessage: "Unreal!!! You've Beaten My Game!",
           score: 0,
           clicked: [],
           allHeroes: shuffleUp
